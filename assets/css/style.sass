@@ -1,0 +1,194 @@
+$browser-context: 16
+
+@function em($pixels, $context: $browser-context)
+	@return #{$pixels/$context}em
+
+
+$black: #000
+$white: #fff
+$crayola: #5698C4
+$whisper: #e9e9e9
+$lavender: #EAEEF1
+$dull-pink: #F6E4E2
+
+=flex($justify-content:flex-start,$align-items:flex-start)
+	display: flex
+	justify-content: $justify-content
+	align-items: $align-items
+
+
+
+// @font-face
+// 	font-family: 'DIN Pro Regular'
+// 	src: url('../fonts/DINPro.eot')
+// 	src: url('DINPro.eot?#iefix') format("embedded-opentype"), url('../fonts/DINPro.woff') format("woff"), url('../fonts/DINPro.ttf') format("truetype")
+// 	font-weight: normal
+// 	font-style: normal
+
+
+
+
+body,html
+	margin: 0
+	position: relative
+	max-width: 100%
+	font-family: 'DIN Pro Regular'
+	
+* 
+	box-sizing: border-box
+
+main
+	background: $white
+
+.container
+	width: 100%
+	padding: 0 20px
+	margin: 0 auto
+
+
+.btn
+	width: em(39)
+	height: em(25)
+	+flex(center,center)
+	color: $black
+	font:
+		size: em(12)
+		weight: bold
+	background: linear-gradient(90deg, #E59219 0%, #F5D854 100%)
+	border-radius: 17.5px
+
+.header
+	height: em(60)
+	width: 100%
+	.container
+		+flex(space-between,center)
+		height: inherit
+	&__hamburger
+		position: relative
+		width: 24px
+		height: 20px
+		.hamburger
+			&__item
+				height: 2px
+				background-color: $black
+				position: absolute
+				left: 0
+				transition: all 0.3s
+				&-one
+					width: em(24)
+					top: 0
+				&-two
+					width: em(14)
+					top: 50%
+					transform: translateY(-50%)
+				&-three
+					width: em(19)
+					bottom: 0
+	&__profile
+		+flex(flex-start,center)
+		.profile
+			&__status
+				+flex(flex-start,center)
+				span
+					color: $crayola
+					font:
+						size: em(12)
+						weight: bold
+					margin: 0 0 0 em(6)
+			&__bonuses
+				margin: 0 0 0 em(10)
+			&__avatar
+				margin: 0 0 0 em(10)
+				border-radius: 50%
+				background: $whisper
+				height: 32px
+				width: 32px
+				img
+					width: 100%
+					height: 100%
+					border-radius: inherit
+
+.rating
+	height: 185px
+	background: $lavender	
+	padding: 25px 0 0 
+	margin: 0 0 25px
+	&__prompt
+		width: 100%
+		height: 114px
+		border-radius: 12px
+		border: 2px solid $crayola
+		background: $white
+		position: relative
+		.prompt
+			&__bonus
+				position: absolute
+				left: 0
+				right: 0
+				margin: 0 auto
+				top: -10px
+			&__title
+				padding: 15px 35px 0
+				font-size: em(15)
+				line-height: 22px
+				text-align: center
+			&__share
+				width: 170px
+				height: 44px
+				background: $crayola
+				border-radius: 22.5px
+				+flex(center,center)
+				font:
+					size: em(16)
+					weight: bold
+				color: $white
+				position: absolute
+				left: 0
+				right: 0
+				margin: 0 auto
+				bottom: -22px				
+.task
+	margin: 0 0 25px
+	&__item
+		//background: $dull-pink url(../img/task_bg.png) no-repeat right
+		border-radius: 3px
+		padding: 10px 16px  
+		min-height: 118px
+		position: relative
+		.task-item
+			&__title
+				font:
+					size: em(16)
+					weight: bold
+				line-height: 22px
+				margin: 0 0 14px
+				max-width: 155px
+			&__location
+				font-size: em(12)
+				margin: 0 0 6px
+				display: flex
+				&::before
+					content: ''
+					display: inline-block
+					width: 16px
+					height: 16px
+					//background: url(../img/ic_location.svg)
+					margin: 0 4px 0 0
+			&__date
+				font-size: em(12)
+				display: flex
+				&::before
+					content: ''
+					display: inline-block
+					width: 16px
+					height: 16px
+					//background: url(../img/ic_time.svg)
+					margin: 0 4px 0 0
+			&__bonus
+				position: absolute
+				bottom: 14px
+				right: 16px
+
+
+
+
