@@ -8,14 +8,19 @@
                 </div>
                 <div class="header__profile profile">
                     <div class="profile__status">
-                        <img src="img/icon.svg" alt="icon">
+                        <img src="../assets/img/icon.svg" alt="icon">
                         <span>Мегамодник</span>
                     </div>
                     <div class="profile__bonuses btn">200</div>
                     <div class="profile__avatar">
-                        <img src="img/avatar.png" alt="icon">
+                        <img src="../assets/img/avatar.png" alt="icon">
                     </div>
                 </div>
             </div>
         </header>
 </template>
+
+
+<style lang="sass">
+
+</style>
