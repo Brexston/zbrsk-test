@@ -6,7 +6,9 @@
 					в корнер Adidas!</div>
 				<div class="task-item__location">Мега Белая Дача</div>
 				<div class="task-item__date">18 марта, 18:00</div>
-				<div class="task-item__bonus btn">+150</div>
+				<div class="task-item__bonus">
+					<div class="btn">+150</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -17,7 +19,7 @@
 .task
 	margin: 0 0 em(25)
 	&__item
-		background: $color-dull_pink url(~/assets/img/task_bg.png) no-repeat right bottom
+		background: $color-dull_pink url(~/assets/img/task_bg.svg) no-repeat right bottom
 		background-size: em(118)
 		border-radius: em(3)
 		padding: em(10) em(16)  

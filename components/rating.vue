@@ -2,7 +2,9 @@
 	<section class="rating">
 		<div class="container">
 			<div class="rating__prompt promt">
-				<div class="prompt__bonus btn">+150</div>
+				<div class="prompt__bonus">
+					<div class="btn">+150</div>
+				</div>
 				<div class="prompt__title">Расскажи о своем участии
 					в проекте: получи +150 баллов
 					и первое достижение!
@@ -32,8 +34,9 @@
 				position: absolute
 				left: 0
 				right: 0
-				margin: 0 auto
-				top: em(-18)
+				top: em(-14)
+				.btn
+					margin: 0 auto
 			&__title
 				padding: em(15) em(35) 0
 				font-size: em(15)

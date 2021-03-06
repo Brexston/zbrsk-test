@@ -11,7 +11,7 @@
 			<div class="rewards__content rewards-content">
 				<div class="rewards-content__item rewards-content-item">
 					<div class="rewards-content-item__avatar">
-						<img src="../assets/img/ic_lady_small.png" alt="Lady">
+						<img src="../assets/img/ic_lady_small.svg" alt="Lady">
 					</div>
 					<div class="rewards-content-item__txt">
 						<div class="rewards-content-item__txt-category">Аксессуар</div>
@@ -24,7 +24,7 @@
 				</div>
 				<div class="rewards-content__item rewards-content-item">
 					<div class="rewards-content-item__avatar">
-						<img src="../assets/img/ic_sb_small.png" alt="Lady">
+						<img src="../assets/img/ic_sb_small.svg" alt="Lady">
 					</div>
 					<div class="rewards-content-item__txt">
 						<div class="rewards-content-item__txt-category">Кроссовки</div>
