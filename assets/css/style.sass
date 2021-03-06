@@ -4,12 +4,12 @@ $browser-context: 16
 	@return #{$pixels/$context}em
 
 
-$black: #000
-$white: #fff
-$crayola: #5698C4
-$crayola-blue: #5697C3
-$whisper: #e9e9e9
-$lavender: #EAEEF1
+$color-black: #000
+$color-white: #fff
+$color-crayola: #5698C4
+$color-crayola_light: #5697C3
+$color-whisper: #e9e9e9
+$color-lavender: #EAEEF1
 $dull-pink: #F6E4E2
 
 =flex($justify-content:flex-start,$align-items:flex-start)
@@ -39,7 +39,7 @@ body,html
 	box-sizing: border-box
 
 main
-	background: $white
+	background: $color-white
 
 .container
 	width: 100%
@@ -49,9 +49,9 @@ main
 
 
 .btn
-	padding: em(5) em(8)
+	padding: em(6.7) em(10) em(6.7)
 	+flex(center,center)
-	color: $black
+	color: $color-black
 	font:
 		size: em(12)
 		weight: bold
@@ -72,7 +72,7 @@ main
 		.hamburger
 			&__item
 				height: em(2)
-				background-color: $black
+				background-color: $color-black
 				position: absolute
 				left: 0
 				transition: all 0.3s
@@ -92,35 +92,117 @@ main
 			&__status
 				+flex(flex-start,center)
 				span
-					color: $crayola
+					color: $color-crayola
 					font:
 						size: em(12)
 						weight: bold
 					margin: 0 0 0 em(6)
+				img
+					width: em(23.24)
+					height: em(23.24)
 			&__bonuses
 				margin: 0 0 0 em(10)
 			&__avatar
 				margin: 0 0 0 em(10)
 				border-radius: 50%
-				background: $whisper
+				background: $color-whisper
 				height: em(32)
 				width: em(32)
 				img
 					width: 100%
 					height: 100%
 					border-radius: inherit
+	&__nav
+		display: none
+		position: absolute
+		top: em(60)
+		margin: 0 em(-20)
+		width: 100%
+		height: 100vh
+		background: linear-gradient(270deg, #C9B0B9 0%, #95B7D8 100%)
+		z-index: 10
+		padding: em(23) em(20) em(26)
+		overflow: auto
+		.header-nav
+			&__profile
+				+flex
+				margin: 0 0 em(44)
+				&-avatar
+					width: em(48)
+					height: em(48)
+					margin: 0 em(16) 0 0
+					img
+						width: 100%
+				&-content
+					color: $color-white
+					font:
+						size: em(16)
+						weight: bold
+					line-height: em(22)
+					span
+						display: block
+			&__menu
+				&-item
+					font:
+						size: em(16)
+						weight: bold
+					color: $color-white
+					text:
+						transform: uppercase
+						decoration: none
+					display: block
+					padding: 0 0 em(17)
+					margin: 0 0 em(19)
+					border-bottom: em(2) solid $color-whisper
+					+flex(flex-start, center)
+					&::before
+						content: ''
+						width: em(24)
+						height: em(24)
+						margin: 0 em(10) 0 0
+						background-size: em(24) !important
+						display: block
+					&_task
+						&::before
+							background: url(../img/ic_task.svg) no-repeat
+					&_rating
+						&::before
+							background: url(../img/ic_rating.svg) no-repeat
+					&_achievements
+						&::before
+							background: url(../img/ic_achievements.svg) no-repeat
+					&_prize
+						&::before
+							background: url(../img/ic_prize.svg) no-repeat
+			&__help
+				font:
+					size: em(16)
+					weight: bold
+				color: $color-white
+				+flex(flex-start, center)
+				margin: em(130) 0 0 0
+				&::before
+						content: ''
+						width: em(24)
+						height: em(24)
+						margin: 0 em(10) 0 0
+						background-size: em(24) !important
+						display: block
+						background: url(../img/ic_info.svg) no-repeat
+
+
 
 .rating
 	height: em(185)
-	background: $lavender	
+	background: $color-lavender	
 	padding: em(25) 0 0 
 	margin: 0 0 em(25)
 	&__prompt
 		width: 100%
 		height: em(114)
 		border-radius: em(12)
-		border: em(2) solid $crayola
-		background: $white
+		border: em(2) solid $color-crayola
+		background: $color-white
 		position: relative
 		.prompt
 			&__bonus
@@ -128,7 +210,7 @@ main
 				left: 0
 				right: 0
 				margin: 0 auto
-				top: em(-10)
+				top: em(-18)
 			&__title
 				padding: em(15) em(35) 0
 				font-size: em(15)
@@ -137,13 +219,13 @@ main
 			&__share
 				width: em(170)
 				height: em(44)
-				background: $crayola
+				background: $color-crayola
 				border-radius: em(22.5)
 				+flex(center,center)
 				font:
 					size: em(16)
 					weight: bold
-				color: $white
+				color: $color-white
 				position: absolute
 				left: 0
 				right: 0
@@ -153,7 +235,8 @@ main
 .task
 	margin: 0 0 em(25)
 	&__item
-		background: $dull-pink url(../img/task_bg.png) no-repeat right
+		background: $dull-pink url(../img/task_bg.png) no-repeat right bottom
+		background-size: em(118)
 		border-radius: em(3)
 		padding: em(10) em(16)  
 		min-height: em(118)
@@ -175,7 +258,8 @@ main
 					display: inline-block
 					width: em(16)
 					height: em(16)
-					background: url(../img/ic_location.svg)
+					background-size: em(16) !important
+					background: url(../img/ic_location.svg) no-repeat center
 					margin: 0 em(4) 0 0
 			&__date
 				font-size: em(12)
@@ -185,7 +269,8 @@ main
 					display: inline-block
 					width: em(16)
 					height: em(16)
-					background: url(../img/ic_time.svg)
+					background-size: em(16) !important
+					background: url(../img/ic_time.svg) no-repeat center
 					margin: 0 em(4) 0 0
 			&__bonus
 				position: absolute
@@ -209,9 +294,9 @@ main
 				border-radius: em(22)
 				text-transform: uppercase
 				padding: 0 em(20)
-				background: $whisper
+				background: $color-whisper
 				text-decoration: none
-				color: $white
+				color: $color-white
 				font-weight: bold
 				&:not(:last-child)
 					margin: 0 0 em(2)
@@ -233,7 +318,7 @@ main
 				&_cyan
 					background: linear-gradient(90deg, #475C6E 0.7%, #B6D1E8 96.67%)
 
-.prizes
+.rewards
 	margin: 0 0 em(15)
 	&__title
 		margin: 0 0 em(25)
@@ -242,29 +327,31 @@ main
 			weight: bold
 	&__tabs
 		+flex(space-between)
-		border-bottom: em(1) solid $whisper
-		.prizes-tabs
+		border-bottom: em(1) solid $color-whisper
+		.rewards-tabs
 			&__item
 				font-size: em(14)
 				line-height: em(22)
 				font-weight: bold
 				padding: 0 0 em(16)
 				&.active
-					color: $crayola-blue
-					border-bottom: em(2) solid $crayola-blue
+					color: $color-crayola_light
+					border-bottom: em(2) solid $color-crayola_light
 	&__content
 		margin: 0 0 em(11)
-		.prizes-content
+		.rewards-content
 			&__item
 				padding: em(26) 0 em(29)
-				border-bottom: em(1) solid $whisper
+				border-bottom: em(1) solid $color-whisper
 				+flex()
-				.prizes-content-item
+				.rewards-content-item
 					&__avatar
 						width: em(70)
 						height: em(70)
 						margin: 0 em(20) 0 0
-						background: $whisper
+						background: $color-whisper
+						img
+							width: 100%
 					&__txt
 						&-category
 							font-size: em(14)
@@ -282,31 +369,31 @@ main
 								size: em(12)
 								weight: bold
 							line-height: em(18)
-							color: $crayola-blue
+							color: $color-crayola_light
 					&__bonuses
 						margin-left: auto
 	&__subtitle
 		font:
 			size: em(14)
 			weight: bold
-		line-height
+		line-height: em(21)
 
 .footer
 	&__app
 		+flex(space-between)
 		margin: 0 0 em(20)
 		padding: 0 0 em(14)
-		border-bottom: em(1) solid $whisper
+		border-bottom: em(1) solid $color-whisper
 		.footer-app
 			&__item
-				width: calc(50% - em(20))
+				width: em(120)
 				img
 					width: 100%
 	&__social
 		+flex(space-between)
 		margin: 0 0 em(20)
 		padding: 0 0 em(20)
-		border-bottom: em(1) solid $whisper
+		border-bottom: em(1) solid $color-whisper
 		.footer-social
 			&__item
 				width: em(29)
@@ -315,12 +402,12 @@ main
 	&__nav
 		margin: 0 0 em(16)
 		padding: 0 0 em(16)
-		border-bottom: em(1) solid $whisper
+		border-bottom: em(1) solid $color-whisper
 		.footer-nav
 			&__item
 				display: block
 				text-decoration: none
-				color: $black
+				color: $color-black
 				font:
 					size: em(14)
 					weight: bold

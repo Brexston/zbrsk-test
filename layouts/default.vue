@@ -4,7 +4,7 @@
     <rating/>
     <task/>
     <categories/>
-    <prizec/>
+    <rewards/>
     <footerBar/>
     <!-- <Nuxt /> -->
   </main>
@@ -15,7 +15,7 @@
   import rating from '@/components/rating'
   import task from '@/components/task'
   import categories from '@/components/categories'
-  import prizec from '@/components/prizec'
+  import rewards from '@/components/rewards'
   import footerBar from '@/components/footerBar'
 
   export default {
@@ -24,7 +24,7 @@
       rating,
       task,
       categories,
-      prizec,
+      rewards,
       footerBar
     }
   }
