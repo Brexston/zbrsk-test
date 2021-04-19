@@ -46,8 +46,10 @@
 		height: 100vh
 		background: linear-gradient(270deg, #C9B0B9 0%, #95B7D8 100%)
 		z-index: 10
-		padding: em(23) em(20) em(26)
+		padding: em(23) em(20) em(80)
 		overflow: auto
+		display: flex
+		flex-direction: column
 		.header-nav
 			&__profile
 				+flex
@@ -56,6 +58,7 @@
 					width: em(48)
 					height: em(48)
 					margin: 0 em(16) 0 0
+					flex-shrink: 0
 					img
 						width: 100%
 				&-content
@@ -105,7 +108,7 @@
 					weight: bold
 				color: $color-white
 				+flex(flex-start, center)
-				margin: em(130) 0 0 0
+				margin: auto 0 0 0
 				&::before
 						content: ''
 						width: em(24)

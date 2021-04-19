@@ -25,7 +25,7 @@ export default {
         '~/assets/css/_fonts.sass',
         '~/assets/css/_variables.sass',
         '~/assets/css/_mixsins.sass',
-      
+        '~/assets/css/_function.sass',
       ]
   },
 

@@ -100,12 +100,16 @@
 		.profile
 			&__status
 				+flex(flex-start,center)
+				max-width: em(150)
 				span
 					color: $color-crayola
 					font:
 						size: em(12)
 						weight: bold
 					margin: 0 0 0 em(6)
+					text-overflow: ellipsis
+					white-space: nowrap
+					overflow: hidden
 				img
 					width: em(23.24)
 					height: em(23.24)
