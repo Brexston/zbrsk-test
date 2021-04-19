@@ -18,13 +18,12 @@
 
 <style lang="sass">
 .rating
-	height: em(185)
+	min-height: em(185)
 	background: $color-lavender 
-	padding: em(25) 0 0 
+	padding: em(25) 0 em(46) 
 	margin: 0 0 em(25)
 	&__prompt
 		width: 100%
-		height: em(114)
 		border-radius: em(12)
 		border: em(2) solid $color-crayola
 		background: $color-white
@@ -38,7 +37,7 @@
 				.btn
 					margin: 0 auto
 			&__title
-				padding: em(15) em(35) 0
+				padding: em(15) em(35) em(33)
 				font-size: em(15)
 				line-height: em(22)
 				text-align: center

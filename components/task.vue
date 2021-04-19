@@ -19,7 +19,7 @@
 .task
 	margin: 0 0 em(25)
 	&__item
-		background: $color-dull_pink url(~/assets/img/task_bg.svg) no-repeat right bottom
+		background: $color-dull_pink url(~/assets/img/task_bg.png) no-repeat right bottom
 		background-size: em(118)
 		border-radius: em(3)
 		padding: em(10) em(16)  
@@ -36,6 +36,7 @@
 			&__location
 				font-size: em(12)
 				margin: 0 0 em(6)
+				padding: 0 em(100) 0 0
 				display: flex
 				&::before
 					content: ''
@@ -48,6 +49,7 @@
 			&__date
 				font-size: em(12)
 				display: flex
+				padding: 0 em(130) 0 0
 				&::before
 					content: ''
 					display: inline-block

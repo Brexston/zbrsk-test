@@ -59,7 +59,7 @@
 				img
 					width: 100%
 	&__nav
-		margin: 0 0 em(16)
+		margin: 0 0 em(20)
 		padding: 0 0 em(16)
 		border-bottom: em(1) solid $color-whisper
 		.footer-nav

@@ -21,7 +21,6 @@
 			</div>
 		</div>
 	 </transition>
-
 </template>
 
 <script>
@@ -47,7 +46,7 @@
 		height: 100vh
 		background: linear-gradient(270deg, #C9B0B9 0%, #95B7D8 100%)
 		z-index: 10
-		padding: em(23) em(20) em(100)
+		padding: em(23) em(20) em(26)
 		overflow: auto
 		.header-nav
 			&__profile

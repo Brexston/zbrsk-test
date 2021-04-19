@@ -1,7 +1,8 @@
 <template>
 	<header class="header">
 		<div class="container">
-			<div class="header__hamburger hamburger">
+			<div class="header__hamburger hamburger" :class="{ 'active' : isProfileActive }"
+         		@click.prevent="toggleProfile">
 				<div class="hamburger__item hamburger__item-one"></div>
 				<div class="hamburger__item hamburger__item-two"></div>
 				<div class="hamburger__item hamburger__item-three"></div>
@@ -13,8 +14,6 @@
 				</div>
 				<div class="profile__bonuses btn">200</div>
 				<div class="profile__avatar"
-				:class="{ 'active' : isProfileActive }"
-         		@click.prevent="toggleProfile"
 				>
 					<img src="../assets/img/avatar.svg" alt="icon">
 				</div>
@@ -81,6 +80,21 @@
 				&-three
 					width: em(19)
 					bottom: 0
+		&.active
+			.hamburger__item
+				&-one
+					width: em(24)
+					top: 50%
+					transform: translateY(-50%) rotate(45deg)
+					transition-delay: .15s
+				&-two
+					width: 0
+				&-three
+					width: em(24)
+					top: 50%
+					transform: translateY(-50%) rotate(-45deg)
+					transition-delay: .15s
+
 	&__profile
 		+flex(flex-start,center)
 		.profile
@@ -103,6 +117,7 @@
 				background: $color-whisper
 				height: em(32)
 				width: em(32)
+				flex-shrink: 0
 				img
 					width: 100%
 					height: 100%

@@ -77,6 +77,7 @@
 						height: em(70)
 						margin: 0 em(20) 0 0
 						background: $color-whisper
+						flex-shrink: 0
 						img
 							width: 100%
 					&__txt
